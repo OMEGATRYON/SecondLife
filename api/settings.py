@@ -72,6 +72,8 @@ else:
 
 ALLOWED_HOSTS = ['*']
 
+AUTH_USER_MODEL = "SecondLifeBack.CustomUser"
+
 CORS_ALLOWED_ORIGIN_REGEXES = [
     r"^https://.*\.gitpod\.io$",
     r"^https://.*\.web\.app$",
@@ -88,6 +90,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
+    'SecondLifeBack'
 ]
 
 X_FRAME_OPTIONS = "SAMEORIGIN"
