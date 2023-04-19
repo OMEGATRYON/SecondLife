@@ -7,6 +7,8 @@ from rest_framework.views import APIView
 from rest_framework.decorators import action
 from .models import CustomUser
 from .serializers import CustomUserSerializer
+from .models import Listing
+from .serializers import ListingSerializer
 
 class UserCreate(APIView):
     permission_classes = (permissions.AllowAny,)
@@ -25,3 +27,7 @@ class UserDetail(generics.RetrieveAPIView):
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
     queryset = CustomUser.objects.all()
     serializer_class = CustomUserSerializer
+
+class ListingListCreate(generics.ListCreateAPIView):
+    queryset = Listing.objects.all()
+    serializer_class = ListingSerializer
