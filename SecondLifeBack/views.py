@@ -31,3 +31,34 @@ class UserDetail(generics.RetrieveAPIView):
 class ListingListCreate(generics.ListCreateAPIView):
     queryset = Listing.objects.all()
     serializer_class = ListingSerializer
+
+
+#  SAME HERE DONT FORGET .models --- Listing, Image, Message, Category, ListingCategory
+#  SAME HERE DONT FORGET .serializers --- ListingSerializer, ImageSerializer, MessageSerializer, CategorySerializer, ListingCategorySerializer
+
+# class ListingListCreate(generics.ListCreateAPIView):
+#     queryset = Listing.objects.all()
+#     serializer_class = ListingSerializer
+
+
+# class ListingRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
+#     queryset = Listing.objects.all()
+#     serializer_class = ListingSerializer
+
+
+# class ImageListCreate(generics.ListCreateAPIView):
+#     queryset = Image.objects.all()
+#     serializer_class = ImageSerializer
+
+
+# class ImageRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
+#     queryset = Image.objects.all()
+#     serializer_class = ImageSerializer
+
+
+# class MessageListCreate(generics.ListCreateAPIView):
+#     queryset = Message.objects.all()
+#     serializer_class = MessageSerializer
+
+
+# class MessageRetrieveUpdateDestroy(generics.Ret

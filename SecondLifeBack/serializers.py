@@ -26,4 +26,49 @@ class CustomUserSerializer(serializers.ModelSerializer):
 class ListingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Listing
-        fields = ('id', 'title')
+        fields = ('id', 'title')             
+
+
+# make sure THAT I IMPORT Listing, Image, Message, Category, ListingCategory QUIT FORGETTING
+
+# class ListingSerializer(serializers.ModelSerializer):
+#     seller = serializers.StringRelatedField()
+#     images = serializers.StringRelatedField(many=True)
+#     categories = serializers.StringRelatedField(many=True)
+
+#     class Meta:
+#         model = Listing
+#         fields = ('id', 'title', 'bio', 'location', 'contact_id', 'is_active', 'seller', 'images', 'categories')
+
+
+# class ImageSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Image
+#         fields = ('id', 'img', 'listing')
+
+
+# class MessageSerializer(serializers.ModelSerializer):
+#     sender = serializers.StringRelatedField()
+#     recipient = serializers.StringRelatedField()
+#     listing = serializers.StringRelatedField()
+
+#     class Meta:
+#         model = Message
+#         fields = ('id', 'text', 'viewed', 'date_time_sent', 'sender', 'recipient', 'listing')
+
+
+# class CategorySerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Category
+#         fields = ('id', 'name')
+
+
+# class ListingCategorySerializer(serializers.ModelSerializer):
+#     category = serializers.StringRelatedField()
+#     listing = serializers.StringRelatedField()
+
+#     class Meta:
+#         model = ListingCategory
+#         fields = ('id', 'category', 'listing')
+
+
