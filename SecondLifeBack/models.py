@@ -9,6 +9,7 @@ class CustomUser(AbstractUser):
 
 class Listing(models.Model):
     title = models.CharField(max_length=100)
+    image_url = models.URLField(null=True)
 
     def __str__(self):
         return self.title

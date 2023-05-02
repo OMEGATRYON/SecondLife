@@ -26,7 +26,7 @@ class CustomUserSerializer(serializers.ModelSerializer):
 class ListingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Listing
-        fields = ('id', 'title')             
+        fields = ('id', 'title', 'photo_url')             
 
 
 # make sure THAT I IMPORT Listing, Image, Message, Category, ListingCategory QUIT FORGETTING
